@@ -1,0 +1,6 @@
+D:\Application\WindowForms_Domain\WindowForms_Domain\bin\Debug\WindowForms_Domain.dll
+D:\Application\WindowForms_Domain\WindowForms_Domain\bin\Debug\WindowForms_Domain.pdb
+D:\Application\WindowForms_Domain\WindowForms_Domain\obj\Debug\WindowForms_Domain.csproj.AssemblyReference.cache
+D:\Application\WindowForms_Domain\WindowForms_Domain\obj\Debug\WindowForms_Domain.csproj.CoreCompileInputs.cache
+D:\Application\WindowForms_Domain\WindowForms_Domain\obj\Debug\WindowForms_Domain.dll
+D:\Application\WindowForms_Domain\WindowForms_Domain\obj\Debug\WindowForms_Domain.pdb
