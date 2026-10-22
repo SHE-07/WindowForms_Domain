@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WindowForms_Domain.Interfaces;
-using WindowForms_Domain.Models.Client;
-using WindowForms_Domain.Models.Credit;
-using WinFormss.Domain.Models;
+using WindowForms_Domain.Models.Credit.CreditClassDocument;
 
-namespace WindowForms_Domain.Models
+namespace WindowForms_Domain.Models.Document
 {
     public class CreditAnct
     {
         /// <summary>
         /// Заявление-анкета на получение кредита .
         /// </summary>
-        public class CreditApplication : InterfaceEvent
+        public class CreditApplication
         {
             /// <summary>
             /// Обьект Client 
@@ -33,9 +27,9 @@ namespace WindowForms_Domain.Models
                 var listWarning = this.credit.Validate();
                 if (listError.Count > 0)
                 {
-                    this.eventHandlerListWithErrors.Invoke(this,listError);
+                    this.eventHandlerListWithErrors.Invoke(this, listError);
                 }
-                if(listWarning.Count > 0)
+                if (listWarning.Count > 0)
                 {
                     this.eventHandlerListWithErrors.Invoke(this, listWarning);
                 }

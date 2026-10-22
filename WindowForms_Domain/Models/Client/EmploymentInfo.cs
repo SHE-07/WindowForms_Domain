@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using WindowForms_Domain.Interfaces;
-using WindowForms_Domain.Models;
+using WindowForms_Domain.Models.Enum;
 
 namespace WinFormss.Domain.Models
 {
     /// <summary>
     /// Класс EmploymentInfo хранит информацию о месте работы и типе занятости клиента.
     /// </summary>
-    public class EmploymentInfo : InterfaceEvent
+    public class EmploymentInfo
     {
 
         /// <summary>
         /// Тип занятости (VALUE_TYPEEMPLOYMENT).
-     
+
         /// </summary>
         public EnumTypeOfEmployment EmploymentType { get; set; }
 
@@ -62,6 +61,6 @@ namespace WinFormss.Domain.Models
             }
             return errors;
         }
-       
+
     }
 }

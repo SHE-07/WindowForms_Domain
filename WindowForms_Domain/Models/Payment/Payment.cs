@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WindowForms_Domain.Models.Paymentt
+﻿namespace WindowForms_Domain.Models.Paymentt
 {
-    public  class Payment
+    public class Payment
     {
         public int Month { get; set; }              // номер месяца (1..N)
         public decimal BalanceBefore { get; set; }  // остаток долга до платежа

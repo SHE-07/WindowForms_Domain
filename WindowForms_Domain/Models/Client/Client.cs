@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WindowForms_Domain.Interfaces;
-using WinFormss.Domain.Models;
+using WindowForms_Domain.Models.Enum;
 
 
 namespace WindowForms_Domain.Models.Client
@@ -12,7 +8,7 @@ namespace WindowForms_Domain.Models.Client
     /// <summary>
     /// Кдасс Client хранит  в себе все данные о клиенте.
     /// </summary>
-    public  class Client : InterfaceEvent
+    public class Client
     {
         /// <summary>
         ///  Фамилии клиента
@@ -21,7 +17,7 @@ namespace WindowForms_Domain.Models.Client
         /// <summary>
         ///  Имя клиента
         /// </summary>
-        public string Last_name {  get; set; } = string.Empty;
+        public string Last_name { get; set; } = string.Empty;
         /// <summary>
         /// Отчество клиента
         /// </summary>
@@ -37,7 +33,7 @@ namespace WindowForms_Domain.Models.Client
         /// <summary>
         /// Объект информация о работе клиента
         /// </summary>
-        public WinFormss.Domain.Models.EmploymentInfo EmploymentInfo {  get; set; } = null;
+        public WinFormss.Domain.Models.EmploymentInfo EmploymentInfo { get; set; } = null;
 
         /// <summary>
         /// Номер телефона заявителя
@@ -94,7 +90,7 @@ namespace WindowForms_Domain.Models.Client
                 errors.Add("Поле - почта - не может быть пустым !");
             }
             if (errors_1.Count > 0) AddListErrors(ref errors, errors_1);
-            if(errors_2.Count > 0) AddListErrors(ref errors, errors_2);
+            if (errors_2.Count > 0) AddListErrors(ref errors, errors_2);
             return errors;
         }
         /// <summary>

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using WindowForms_Domain.Interfaces;
+
 
 namespace WinFormss.Domain.Models
 {
     /// <summary>
     /// Класс Passport хранит паспортные данные клиента.
     /// </summary>
-    public class Passport : InterfaceEvent
+    public class Passport
+
     {
         /// <summary>
         /// Регистрация по паспорту
@@ -72,6 +73,6 @@ namespace WinFormss.Domain.Models
             }
             return Errors;
         }
-      
+
     }
 }
