@@ -23,31 +23,9 @@ namespace WindowForms_Domain.Models.Document
             {
                 this.ClientInfo = clientInfo;
                 this.credit = credit;
-                var listError = this.ClientInfo.Validate();
-                var listWarning = this.credit.Validate();
-                if (listError.Count > 0)
-                {
-                    this.eventHandlerListWithErrors.Invoke(this, listError);
-                }
-                if (listWarning.Count > 0)
-                {
-                    this.eventHandlerListWithErrors.Invoke(this, listWarning);
-                }
-
+                
             }
 
-            /// <summary>
-            /// событие с Exception
-            /// </summary>
-            public event EventHandler<Exception> eventHandlerException;
-            /// <summary>
-            /// событие с List<string>
-            /// </summary>
-            public event EventHandler<List<string>> eventHandlerListWithErrors;
-            /// <summary>
-            /// Событие EventHandler
-            /// </summary>
-            public event EventHandler eventhandler;
         }
     }
 }

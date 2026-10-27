@@ -9,10 +9,8 @@ namespace WinFormss.Domain.Models
     /// </summary>
     public class EmploymentInfo
     {
-
         /// <summary>
         /// Тип занятости (VALUE_TYPEEMPLOYMENT).
-
         /// </summary>
         public EnumTypeOfEmployment EmploymentType { get; set; }
 
@@ -28,39 +26,6 @@ namespace WinFormss.Domain.Models
         /// </summary>
         public string FieldOfActivity { get; set; } = string.Empty;
 
-        /// <summary>
-        /// событие с Exception
-        /// </summary>
-        public event EventHandler<Exception> eventHandlerException;
-        /// <summary>
-        /// событие List<string>
-        /// </summary>
-        public event EventHandler<List<string>> eventHandlerListWithErrors;
-        /// <summary>
-        /// Событие EventHandler
-        /// </summary>
-        public event EventHandler eventhandler;
-        /// <summary>
-        /// Метод проверяет на null объекты или пустые строки поля класса EmploymentInfo
-        /// </summary>
-        /// <returns>Возвращает список ошибок, если поля являютя пустями </returns>
-        public List<string> Validate()
-        {
-            List<string> errors = new List<string>();
-            if (string.IsNullOrEmpty(this.EmploymentType.ToString()))
-            {
-                errors.Add("поле - Тип занятости - не может быть пустым");
-            }
-            if (string.IsNullOrEmpty(this.OrganizationName))
-            {
-                errors.Add("поле - Название организации - не может быть пустым, если организация отсутстует, то проверьте тип занятости !");
-            }
-            if (string.IsNullOrEmpty(this.FieldOfActivity))
-            {
-                errors.Add("Сфера деятельности ( услуг ) не может быть пустым !");
-            }
-            return errors;
-        }
 
     }
 }

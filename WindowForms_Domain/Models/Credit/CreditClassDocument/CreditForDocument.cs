@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using WindowForms_Domain.Attributes_Doc;
+
 namespace WindowForms_Domain.Models.Credit.CreditClassDocument
 {
     /// <summary>
@@ -8,8 +9,6 @@ namespace WindowForms_Domain.Models.Credit.CreditClassDocument
     /// </summary>
     public class CreditForDocument
     {
-
-
         /// <summary>
         /// Название / тип кредита (NAME_TYPE_CREDITA).
         /// Например: "Потребительский", "Автокредит".
@@ -65,17 +64,11 @@ namespace WindowForms_Domain.Models.Credit.CreditClassDocument
         [DocAttributes("NAME_TYPE_PAYMENT")]
         public string PaymentType { get; set; } = string.Empty;
 
-        public List<string> Validate()
-        {
-            List<string> errors = new List<string>();
-            if (string.IsNullOrEmpty(this.NameCredit)) errors.Add("Название кредита не можжет быть пустым !");
-            if (string.IsNullOrEmpty(this.MethodOfIssuance)) errors.Add("Способ выдачи кредита - способ выдачи не может быть пустыи !");
-            if (string.IsNullOrEmpty(this.Collateral)) errors.Add("Поле залог может быть пустым только проверьте соответсвующие поле !");
-            if (this.Amount < 0) errors.Add("Поле сумма кредита - не может быть пустым или отрицательным");
-            if (this.TermInMonths < 0) errors.Add("Период не может быть отрицательным !");
-            if (this.FinalPaymentDate == null) errors.Add("Дата не может быть пустой !");
-            if (string.IsNullOrEmpty(this.PaymentType)) errors.Add("Поле тип погашения кредита не может быть пустым !");
-            return errors;
-        }
+        /// <summary>
+        /// Процентная ставка (для расчетов)
+        /// </summary>
+        public decimal AnnualRate { get; set; }
+
+       
     }
 }
